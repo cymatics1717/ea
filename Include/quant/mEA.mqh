@@ -36,14 +36,16 @@ public:
    virtual int update();
    virtual int openBuy();
    virtual int openSell();
+   virtual int closeAll();
+   virtual int modifyOrder();
+   
    virtual int closeBuy();
    virtual int closeSell();
-   virtual int modifyOrder();
 
 };
 
-mEA::mEA(string magic){
-   this.magic = magic;
+mEA::mEA(string m){
+   magic = m;
    Print(__FUNCTION__+": "+magic);
 }
 mEA::~mEA(){
@@ -56,6 +58,11 @@ int mEA::openBuy(){
 }
 
 int mEA::openSell(){
+   Print(__FUNCTION__);
+   return 0;
+}
+
+int mEA::closeAll(){
    Print(__FUNCTION__);
    return 0;
 }

@@ -20,14 +20,16 @@ public:
    virtual int update();
    virtual int openBuy();
    virtual int openSell();
+   virtual int closeAll();
+   virtual int modifyOrder();
+   
    virtual int closeBuy();
    virtual int closeSell();
-   virtual int modifyOrder();
   };
 //+------------------------------------------------------------------+
 //|                                                                  |
 //+------------------------------------------------------------------+
-martingale::martingale(string magic):mEA(magic)
+martingale::martingale(string m):mEA(m)
   {
    Print(__FUNCTION__+": "+magic);
   }
@@ -50,6 +52,12 @@ int martingale::openBuy()
   }
 
 int martingale::openSell()
+  {
+  Print(__FUNCTION__);
+  return 0;
+  }
+
+int martingale::closeAll()
   {
   Print(__FUNCTION__);
   return 0;
