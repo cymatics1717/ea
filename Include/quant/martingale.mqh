@@ -18,13 +18,11 @@ public:
    martingale(string magic);
    ~martingale();
    virtual int update();
-   virtual int openBuy();
-   virtual int openSell();
-   virtual int closeAll();
-   virtual int modifyOrder();
-   
-   virtual int closeBuy();
-   virtual int closeSell();
+   virtual int sig4openBuy();
+   virtual int sig4openSell();
+   virtual int sig4closeAll();
+   virtual int sig4modifyOrder();
+
   };
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -45,37 +43,25 @@ int martingale::update()
   return 0;
   }
   
-int martingale::openBuy()
+int martingale::sig4openBuy()
   {
   Print(__FUNCTION__);
   return 0;
   }
 
-int martingale::openSell()
+int martingale::sig4openSell()
   {
   Print(__FUNCTION__);
   return 0;
   }
 
-int martingale::closeAll()
+int martingale::sig4closeAll()
   {
   Print(__FUNCTION__);
   return 0;
   }
 
-int martingale::closeBuy()
-  {
-  Print(__FUNCTION__);
-  return 0;
-  }
-
-int martingale::closeSell()
-  {
-  Print(__FUNCTION__);
-  return 0;
-  }
-
-int martingale::modifyOrder()
+int martingale::sig4modifyOrder()
   {
   Print(__FUNCTION__);
   return 0;

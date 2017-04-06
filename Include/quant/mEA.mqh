@@ -26,7 +26,7 @@
 //   string ErrorDescription(int error_code);
 // #import
 //+------------------------------------------------------------------+
-class mEA{
+class mEA {
 
 public:
    string magic;
@@ -34,14 +34,11 @@ public:
    mEA(string magic);
    virtual ~mEA();
    virtual int update();
-   virtual int openBuy();
-   virtual int openSell();
-   virtual int closeAll();
-   virtual int modifyOrder();
+   virtual int sig4openBuy();
+   virtual int sig4openSell();
+   virtual int sig4closeAll();
+   virtual int sig4modifyOrder();
    
-   virtual int closeBuy();
-   virtual int closeSell();
-
 };
 
 mEA::mEA(string m){
@@ -52,27 +49,17 @@ mEA::~mEA(){
    Print(__FUNCTION__);
 }
 
-int mEA::openBuy(){
+int mEA::sig4openBuy(){
    Print(__FUNCTION__);
    return 0;
 }
 
-int mEA::openSell(){
+int mEA::sig4openSell(){
    Print(__FUNCTION__);
    return 0;
 }
 
-int mEA::closeAll(){
-   Print(__FUNCTION__);
-   return 0;
-}
-
-int mEA::closeBuy(){
-   Print(__FUNCTION__);
-   return 0;
-}
-
-int mEA::closeSell(){
+int mEA::sig4closeAll(){
    Print(__FUNCTION__);
    return 0;
 }
@@ -83,7 +70,7 @@ int mEA::update(){
 }
 
 
-int mEA::modifyOrder(){
+int mEA::sig4modifyOrder(){
    Print(__FUNCTION__);
    return 0;
 }
